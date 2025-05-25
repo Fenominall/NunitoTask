@@ -11,7 +11,7 @@ import SwiftUI
 struct NunitoTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmptyView()
         }
     }
 }
