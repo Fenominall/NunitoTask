@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum AppImages {
+enum NunitoAppImages {
     case success
     case failure
     case noWifi
