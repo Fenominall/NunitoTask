@@ -10,9 +10,22 @@
 		4F73D6912DE2E988002F265E /* NunitoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NunitoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4F73D6BC2DE326C0002F265E /* Exceptions for "NunitoTask" folder in "NunitoTask" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Foundation/WFNetwork,
+			);
+			target = 4F73D6902DE2E988002F265E /* NunitoTask */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4F73D6932DE2E988002F265E /* NunitoTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4F73D6BC2DE326C0002F265E /* Exceptions for "NunitoTask" folder in "NunitoTask" target */,
+			);
 			path = NunitoTask;
 			sourceTree = "<group>";
 		};
