@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F73D6DC2DE3291D002F265E /* WFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D6DB2DE3291D002F265E /* WFNetwork */; };
-		4F73D6DE2DE32920002F265E /* NunitoCoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D6DD2DE32920002F265E /* NunitoCoreDomain */; };
+		4F73D7C02DE349DA002F265E /* NunitoCoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D7BF2DE349DA002F265E /* NunitoCoreDomain */; };
+		4F73D7C22DE349DD002F265E /* WFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D7C12DE349DD002F265E /* WFNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F73D6DE2DE32920002F265E /* NunitoCoreDomain in Frameworks */,
-				4F73D6DC2DE3291D002F265E /* WFNetwork in Frameworks */,
+				4F73D7C22DE349DD002F265E /* WFNetwork in Frameworks */,
+				4F73D7C02DE349DA002F265E /* NunitoCoreDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				4F73D6932DE2E988002F265E /* NunitoTask */,
-				4F73D6DA2DE3291D002F265E /* Frameworks */,
+				4F73D7BE2DE349DA002F265E /* Frameworks */,
 				4F73D6922DE2E988002F265E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,7 +66,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F73D6DA2DE3291D002F265E /* Frameworks */ = {
+		4F73D7BE2DE349DA002F265E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -93,8 +93,8 @@
 			);
 			name = NunitoTask;
 			packageProductDependencies = (
-				4F73D6DB2DE3291D002F265E /* WFNetwork */,
-				4F73D6DD2DE32920002F265E /* NunitoCoreDomain */,
+				4F73D7BF2DE349DA002F265E /* NunitoCoreDomain */,
+				4F73D7C12DE349DD002F265E /* WFNetwork */,
 			);
 			productName = NunitoTask;
 			productReference = 4F73D6912DE2E988002F265E /* NunitoTask.app */;
@@ -292,8 +292,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,8 +320,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,13 +358,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4F73D6DB2DE3291D002F265E /* WFNetwork */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = WFNetwork;
-		};
-		4F73D6DD2DE32920002F265E /* NunitoCoreDomain */ = {
+		4F73D7BF2DE349DA002F265E /* NunitoCoreDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NunitoCoreDomain;
+		};
+		4F73D7C12DE349DD002F265E /* WFNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WFNetwork;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
