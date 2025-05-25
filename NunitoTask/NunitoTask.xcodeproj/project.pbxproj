@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4F73D6DC2DE3291D002F265E /* WFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D6DB2DE3291D002F265E /* WFNetwork */; };
+		4F73D6DE2DE32920002F265E /* NunitoCoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D6DD2DE32920002F265E /* NunitoCoreDomain */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4F73D6912DE2E988002F265E /* NunitoTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NunitoTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F73D6DE2DE32920002F265E /* NunitoCoreDomain in Frameworks */,
+				4F73D6DC2DE3291D002F265E /* WFNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				4F73D6932DE2E988002F265E /* NunitoTask */,
+				4F73D6DA2DE3291D002F265E /* Frameworks */,
 				4F73D6922DE2E988002F265E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +64,13 @@
 				4F73D6912DE2E988002F265E /* NunitoTask.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4F73D6DA2DE3291D002F265E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +93,8 @@
 			);
 			name = NunitoTask;
 			packageProductDependencies = (
+				4F73D6DB2DE3291D002F265E /* WFNetwork */,
+				4F73D6DD2DE32920002F265E /* NunitoCoreDomain */,
 			);
 			productName = NunitoTask;
 			productReference = 4F73D6912DE2E988002F265E /* NunitoTask.app */;
@@ -341,6 +358,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F73D6DB2DE3291D002F265E /* WFNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WFNetwork;
+		};
+		4F73D6DD2DE32920002F265E /* NunitoCoreDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NunitoCoreDomain;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F73D6892DE2E988002F265E /* Project object */;
 }
