@@ -13,7 +13,7 @@ public struct LocalUser {
     public let position: String
     public let email: String
     public let phoneNumber: String
-    public let userAvatar: Data?
+    public let userAvatar: URL?
     
     public init(
         id: UUID,
@@ -21,7 +21,7 @@ public struct LocalUser {
         position: String,
         email: String,
         phoneNumber: String,
-        userAvatar: Data?
+        userAvatar: URL?
     ) {
         self.id = id
         self.name = name
