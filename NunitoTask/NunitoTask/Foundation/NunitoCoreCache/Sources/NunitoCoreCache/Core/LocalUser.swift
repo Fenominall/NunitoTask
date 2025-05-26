@@ -1,16 +1,16 @@
 //
 //  File.swift
-//  NunitoCoreDomain
+//  NunitoCoreCache
 //
 //  Created by Fenominall on 5/25/25.
 //
 
 import Foundation
 
-public struct User {
+public struct LocalUser {
     public let id: UUID
     public let name: String
-    public let position: Position
+    public let position: String
     public let email: String
     public let phoneNumber: String
     public let userAvatar: URL?
@@ -18,7 +18,7 @@ public struct User {
     public init(
         id: UUID,
         name: String,
-        position: Position,
+        position: String,
         email: String,
         phoneNumber: String,
         userAvatar: URL?
