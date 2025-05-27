@@ -31,7 +31,7 @@ public extension LocalUserStore {
 // MARK: - Insert
 extension LocalUserStore: UserFeedCache {
     public func save(_ feed: [User]) async throws {
-        store.insert(feed.convertToLocale())
+        try await store.insert(feed.convertToLocale())
     }
 }
 
