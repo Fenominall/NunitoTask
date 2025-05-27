@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import NunitoCoreCache
 
 @objc(ManagedUser)
 public class ManagedUser: NSManagedObject {
@@ -18,3 +19,17 @@ public class ManagedUser: NSManagedObject {
     @NSManaged public var userAvatar: URL?
     @NSManaged public var cache: ManagedCache
 }
+
+extension ManagedUser {
+    var local: LocalUser {
+        return LocalUser(
+            id: id,
+            name: name,
+            position: position,
+            email: email,
+            phoneNumber: phoneNumber,
+            userAvatar: userAvatar
+        )
+    }
+}
+
