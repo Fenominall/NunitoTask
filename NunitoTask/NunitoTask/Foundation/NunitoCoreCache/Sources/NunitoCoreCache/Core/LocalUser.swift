@@ -7,18 +7,18 @@
 
 import Foundation
 
-public struct LocalUser {
-    public let id: UUID
+public struct LocalUser: Equatable, Sendable {
+    public let id: Int
     public let name: String
-    public let position: String
+    public let position: LocalPosition
     public let email: String
     public let phoneNumber: String
     public let userAvatar: URL?
     
     public init(
-        id: UUID,
+        id: Int,
         name: String,
-        position: String,
+        position: LocalPosition,
         email: String,
         phoneNumber: String,
         userAvatar: URL?
