@@ -33,3 +33,23 @@ extension ManagedUser {
     }
 }
 
+// MARK: - Inserting Cache
+extension ManagedUser {
+    static func createBatch(
+        from localUsers: [LocalUser],
+        in context: NSManagedObjectContext,
+        linkedTo cache: ManagedCache
+    ) -> [ManagedUser] {
+        localUsers.map { local in
+            let user = ManagedUser(context: context)
+            user.id = local.id
+            user.name = local.name
+            user.email = local.email
+            user.phoneNumber = local.phoneNumber
+            user.position = local.position
+            user.userAvatar = local.userAvatar
+            user.cache = cache
+            return user
+        }
+    }
+}
