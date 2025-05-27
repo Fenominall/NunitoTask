@@ -10,7 +10,7 @@ import Foundation
 public struct LocalUser: Equatable, Sendable {
     public let id: UUID
     public let name: String
-    public let position: String
+    public let position: LocalPosition
     public let email: String
     public let phoneNumber: String
     public let userAvatar: URL?
@@ -18,7 +18,7 @@ public struct LocalUser: Equatable, Sendable {
     public init(
         id: UUID,
         name: String,
-        position: String,
+        position: LocalPosition,
         email: String,
         phoneNumber: String,
         userAvatar: URL?

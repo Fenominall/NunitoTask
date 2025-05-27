@@ -44,7 +44,10 @@ extension LocalUserStore: UserSaver {
         LocalUser(
             id: user.id,
             name: user.name,
-            position: user.position.rawValue,
+            position: LocalPosition(
+                id: user.position.id,
+                name: user.position.name
+            ),
             email: user.email,
             phoneNumber: user.phoneNumber,
             userAvatar: user.userAvatar
@@ -55,14 +58,13 @@ extension LocalUserStore: UserSaver {
 // MARK: - Helpers
 public extension User {
     init?(localUser: LocalUser) {
-        guard let position = Position(rawValue: localUser.position) else {
-            return nil
-        }
-        
         self.init(
             id: localUser.id,
             name: localUser.name,
-            position: position,
+            position: Position(
+                id: localUser.position.id,
+                name: localUser.position.name
+            ),
             email: localUser.email,
             phoneNumber: localUser.phoneNumber,
             userAvatar: localUser.userAvatar
@@ -82,7 +84,10 @@ public extension LocalUser {
         self.init(
             id: user.id,
             name: user.name,
-            position: user.position.rawValue,
+            position: LocalPosition(
+                id: user.position.id,
+                name: user.position.name
+            ),
             email: user.email,
             phoneNumber: user.phoneNumber,
             userAvatar: user.userAvatar

@@ -13,7 +13,7 @@ import NunitoCoreCache
 public class ManagedUser: NSManagedObject {
     @NSManaged public var id: UUID
     @NSManaged public var name: String
-    @NSManaged public var position: String
+    @NSManaged public var position: ManagedPosition
     @NSManaged public var email: String
     @NSManaged public var phoneNumber: String
     @NSManaged public var userAvatar: URL?
@@ -25,7 +25,10 @@ extension ManagedUser {
         return LocalUser(
             id: id,
             name: name,
-            position: position,
+            position: LocalPosition(
+                id: Int(position.id),
+                name: position.name as? String ?? ""
+            ),
             email: email,
             phoneNumber: phoneNumber,
             userAvatar: userAvatar
@@ -60,7 +63,13 @@ extension ManagedUser {
             user.name = local.name
             user.email = local.email
             user.phoneNumber = local.phoneNumber
-            user.position = local.position
+            
+            let position = ManagedPosition(context: context)
+            let positionId64 = Int64(local.position.id)
+            position.id = positionId64
+            position.name = local.name
+            
+            user.position = position
             user.userAvatar = local.userAvatar
             user.cache = cache
             return user

@@ -3,6 +3,11 @@
     <entity name="ManagedCache" representedClassName="ManagedCache" syncable="YES">
         <relationship name="feed" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="ManagedUser" inverseName="cache" inverseEntity="ManagedUser"/>
     </entity>
+    <entity name="ManagedPosition" representedClassName="ManagedPosition" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ManagedUser" inverseName="positon" inverseEntity="ManagedUser"/>
+    </entity>
     <entity name="ManagedUser" representedClassName="ManagedUser" syncable="YES">
         <attribute name="email" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -11,5 +16,6 @@
         <attribute name="position" attributeType="String"/>
         <attribute name="userAvatar" optional="YES" attributeType="URI"/>
         <relationship name="cache" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedCache" inverseName="feed" inverseEntity="ManagedCache"/>
+        <relationship name="positon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedPosition" inverseName="users" inverseEntity="ManagedPosition"/>
     </entity>
 </model>
