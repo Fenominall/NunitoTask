@@ -11,7 +11,7 @@ import NunitoCoreCache
 
 @objc(ManagedUser)
 public class ManagedUser: NSManagedObject {
-    @NSManaged public var id: UUID
+    @NSManaged public var id: Int
     @NSManaged public var name: String
     @NSManaged public var position: ManagedPosition
     @NSManaged public var email: String
@@ -38,13 +38,13 @@ extension ManagedUser {
 
 // MARK: - Fetching users
 extension ManagedUser {
-    static func fetchExistingUsersByID(in context: NSManagedObjectContext) throws -> [UUID: ManagedUser] {
+    static func fetchExistingUsersByID(in context: NSManagedObjectContext) throws -> [Int: ManagedUser] {
         guard let entityName = entity().name else { return [:] }
         let request = NSFetchRequest<ManagedUser>(entityName: entityName)
         request.returnsObjectsAsFaults = false
         let users = try context.fetch(request)
         
-        return users.reduce(into: [UUID: ManagedUser]()) { result, user in
+        return users.reduce(into: [Int: ManagedUser]()) { result, user in
             result[user.id] = user
         }
     }
@@ -65,8 +65,7 @@ extension ManagedUser {
             user.phoneNumber = local.phoneNumber
             
             let position = ManagedPosition(context: context)
-            let positionId64 = Int64(local.position.id)
-            position.id = positionId64
+            position.id = local.position.id
             position.name = local.name
             
             user.position = position
