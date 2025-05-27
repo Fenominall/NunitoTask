@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F73D7C02DE349DA002F265E /* NunitoCoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D7BF2DE349DA002F265E /* NunitoCoreDomain */; };
 		4F73D7C22DE349DD002F265E /* WFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 4F73D7C12DE349DD002F265E /* WFNetwork */; };
+		4FDDAE7B2DE4702F00BF32AD /* NunitoCoreCache in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDAE7A2DE4702F00BF32AD /* NunitoCoreCache */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F73D7C22DE349DD002F265E /* WFNetwork in Frameworks */,
+				4FDDAE7B2DE4702F00BF32AD /* NunitoCoreCache in Frameworks */,
 				4F73D7C02DE349DA002F265E /* NunitoCoreDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,7 @@
 			packageProductDependencies = (
 				4F73D7BF2DE349DA002F265E /* NunitoCoreDomain */,
 				4F73D7C12DE349DD002F265E /* WFNetwork */,
+				4FDDAE7A2DE4702F00BF32AD /* NunitoCoreCache */,
 			);
 			productName = NunitoTask;
 			productReference = 4F73D6912DE2E988002F265E /* NunitoTask.app */;
@@ -365,6 +368,10 @@
 		4F73D7C12DE349DD002F265E /* WFNetwork */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WFNetwork;
+		};
+		4FDDAE7A2DE4702F00BF32AD /* NunitoCoreCache */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NunitoCoreCache;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

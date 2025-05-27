@@ -1,13 +1,13 @@
 //
 //  File.swift
-//  NunitoCoreDomain
+//  NunitoCoreCache
 //
-//  Created by Fenominall on 5/25/25.
+//  Created by Fenominall on 5/27/25.
 //
 
 import Foundation
 
-public struct Position: Equatable {
+public struct LocalPosition: Equatable, Sendable {
     public let id: Int
     public let name: String
     
