@@ -27,7 +27,7 @@ extension ManagedUser {
             name: name,
             position: LocalPosition(
                 id: Int(position.id),
-                name: position.name as? String ?? ""
+                name: position.name ?? ""
             ),
             email: email,
             phoneNumber: phoneNumber,
