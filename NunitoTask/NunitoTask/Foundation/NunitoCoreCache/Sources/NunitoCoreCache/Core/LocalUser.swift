@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct LocalUser {
+public struct LocalUser: Equatable, Sendable {
     public let id: UUID
     public let name: String
     public let position: String
