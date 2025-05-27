@@ -11,7 +11,7 @@ import CoreData
 
 @objc(ManagedPosition)
 public class ManagedPosition: NSManagedObject {
-    @NSManaged public var id: Int64
+    @NSManaged public var id: Int
     @NSManaged public var name: String?
     @NSManaged public var users: NSSet?
 }
