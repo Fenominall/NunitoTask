@@ -41,3 +41,24 @@ extension ManagedCache {
         return oldCache
     }
 }
+
+// MARK: - Insertion
+extension ManagedCache {
+    static func insert(
+        _ users: [LocalUser],
+        in context: NSManagedObjectContext
+    ) throws {
+        let cache = try fetchOrCreateCache(in: context)
+        let existingUsersByID = try ManagedUser.fetchExistingUsersByID(in: context)
+        
+        let newUsers = users.filter { existingUsersByID[$0.id] == nil }
+        
+        let managedUsers = ManagedUser.createBatch(from: newUsers, in: context, linkedTo: cache)
+        
+        let currentFeed = NSMutableOrderedSet(orderedSet: cache.feed)
+        managedUsers.forEach { currentFeed.add($0) }
+        cache.feed = currentFeed
+        
+        try context.save()
+    }
+}

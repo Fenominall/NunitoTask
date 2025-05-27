@@ -33,6 +33,20 @@ extension ManagedUser {
     }
 }
 
+// MARK: - Fetching users
+extension ManagedUser {
+    static func fetchExistingUsersByID(in context: NSManagedObjectContext) throws -> [UUID: ManagedUser] {
+        guard let entityName = entity().name else { return [:] }
+        let request = NSFetchRequest<ManagedUser>(entityName: entityName)
+        request.returnsObjectsAsFaults = false
+        let users = try context.fetch(request)
+        
+        return users.reduce(into: [UUID: ManagedUser]()) { result, user in
+            result[user.id] = user
+        }
+    }
+}
+
 // MARK: - Inserting Cache
 extension ManagedUser {
     static func createBatch(
