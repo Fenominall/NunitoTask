@@ -1,5 +1,5 @@
 # NunitoTask
-iOS Middle developer test assessment
+iOS developer test assessment
 
 
 ### ( < ) Test assignment
